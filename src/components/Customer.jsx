@@ -8,5 +8,4 @@ const Customer = (props) => {
     </li>
   );
 };
-
 export default Customer;
