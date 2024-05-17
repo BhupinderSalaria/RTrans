@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import CustomerList from "./components/CustomerList";
 import ErrorMessage from "./components/ErrorMessage";
@@ -11,9 +9,9 @@ function App() {
 
   return (
     <>
-      <h1>Customers List</h1>
-      <ErrorMessage />
-      <CustomerList />
+      <h1 className="app-heading">Customers List</h1>
+      <ErrorMessage customers={customerList} />
+      <CustomerList customers={customerList} />
     </>
   );
 }
