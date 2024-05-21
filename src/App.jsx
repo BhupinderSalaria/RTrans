@@ -9,12 +9,22 @@ function App() {
   //let customerList = [];
   let customerList = ["David", "Fillips", "Jack"];
 
+  let textToShow = "Search For Customer : ";
+
+  const handleOnChangeSearch = (event) => {
+    console.log(event.target.value);
+    textToShow = event.target.value;
+  };
+
   return (
     <>
       <Container>
         <h1 className="app-heading">Customers List</h1>
         <ErrorMessage customers={customerList} />
-        <CustomerSearch></CustomerSearch>
+        <CustomerSearch
+          handleOnChangeSearch={handleOnChangeSearch}
+        ></CustomerSearch>
+        <p>{textToShow}</p>
         <CustomerList customers={customerList} />
       </Container>
       <Container>

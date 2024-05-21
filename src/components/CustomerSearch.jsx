@@ -1,10 +1,6 @@
 import styles from "./CustomerSearch.module.css";
 
-const CustomerSearch = () => {
-  const handleOnChangeSearch = (event) => {
-    console.log(event.target.value);
-  };
-
+const CustomerSearch = ({ handleOnChangeSearch }) => {
   return (
     <div>
       <input
