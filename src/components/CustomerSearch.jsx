@@ -1,6 +1,6 @@
 import styles from "./CustomerSearch.module.css";
 
-const CustomerSearch = ({ handleOnChangeSearch }) => {
+const CustomerSearch = ({ handleOnChangeSearch, handleKeyDown }) => {
   return (
     <div>
       <input
@@ -8,6 +8,7 @@ const CustomerSearch = ({ handleOnChangeSearch }) => {
         placeholder="Enter the customer name"
         className={styles.searchInput}
         onChange={handleOnChangeSearch}
+        onKeyDown={handleKeyDown}
       ></input>
     </div>
   );
